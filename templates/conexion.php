@@ -3,16 +3,14 @@
     function conectar(){
         $servidor = "localhost";
         $usuario = "root";
-        $clave = "12345";
-        $con = mysqli_connect($servidor, $usuario, $clave);
+        $clave = "";
+        $db = "Biblioteca";
+        $con = mysqli_connect($servidor, $usuario, $clave, $db);
 
-        if($con){
-            echo "Conectado";
-        }else{
-            echo "Error al conectar";
-        }
-    
-        // return $con;
+        return $con;
     }
+
+    conectar();
+
 
 ?>
