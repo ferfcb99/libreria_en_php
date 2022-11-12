@@ -28,11 +28,14 @@
         }
     </style>
 </head>
-<body >
+<body>
 
     <main class="main" style="max-width: 80%; margin: 0 auto;">
         <div class="">
-            <img src="../img/libro1.jpg" alt="imagen de libro">
+                 <?php 
+                    echo "<img src='../img/libro".$libro['idlibro'].".jpg' alt='portada libro'>"
+                    ?>
+         
         </div>
         <div>
             <p>Titulo: <?php echo $libro['nombrelibro']; ?> 

@@ -5,12 +5,11 @@
         $usuario = "root";
         $clave = "";
         $db = "Biblioteca";
-        $con = mysqli_connect($servidor, $usuario, $clave, $db);
+        $con = mysqli_connect($servidor, $usuario, $clave, $db); 
 
         return $con;
     }
 
     conectar();
-
 
 ?>
