@@ -10,25 +10,24 @@
 
 <body>
 
-    <form action="validarInicioSesion.php" method="POST">
+    <form action="validaRegistroUsuario.php" method="POST">
         <fieldset>
             <legend>
                 Formulario de ingreso
             </legend>
             <div>
                 <div>
-                    <label>Usuario: </label>
-                    <input type="text" placeholder="ingresa tu usuario" name="nombreUsuario">
+                    <label>Nombre de usuario: </label>
+                    <input type="text" placeholder="ingresa tu usuario" name="usuario">
                 </div>
                 <div>
-                    <label>Clave: </label>
-                    <input type="password" placeholder="ingresa tu clave" name="clave">
+                    <label>clave</label>
+                    <input type="text" placeholder="ingresa tu clave" name="clave">
                 </div>
+                
                 <div>
                     <input type="submit" value="Enviar">
-                    <a href="pantallaRegistroCliente.php">Registrate</a>
                 </div>
-
             </div>
         </fieldset>
     </form>

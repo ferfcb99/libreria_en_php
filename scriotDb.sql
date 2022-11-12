@@ -19,7 +19,7 @@ create table usuario(
     nombreUsuario varchar(20) not null unique,
     clave varchar(5) not null,
     -- llave foranea 
-    idcliente int not null,
+    idcliente int not null,     
     primary key(nombreUsuario, clave),
     foreign key(idcliente) references cliente(idcliente)
 );
@@ -51,11 +51,6 @@ create table ClienteLibro(
 
 
 
-insert into cliente(nombrecliente, apellidocliente, telefono, direccion)
-values("Rodrigo", "Suarez", "12345678", "Miami"), 
-	  ("Rodolfo", "Bunny", "4567", "New York");
-      
-insert into usuario(nombreUsuario, clave, idcliente) values('Rodri', '12345', 1), ('Rodo', '12345', 2);
 insert into Genero (nombregenero) values('Terror'), 
 ('Accion'), ('Romance'), ('Comedia'), ('Narrativo'), ('Teatral'),
 ('Ciencia');
@@ -72,3 +67,4 @@ insert into libro (
 ('libro4', '../img/libro8.jpg', 3526.78, 100, 'edi1', 'pepe', 'descripciondescripciondescripciondescripcion' ,1),
 ('libro5', '../img/libro9.jpg', 3526.78, 100, 'edi1', 'pepe', 'descripciondescripciondescripciondescripcion' ,5),
 ('libro6', '../img/libro10.jpg', 3526.78, 100, 'edi1', 'pepe', 'descripciondescripciond' ,2);
+

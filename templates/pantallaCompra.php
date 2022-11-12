@@ -1,6 +1,6 @@
 <?php
 
-    include('conexion.php');
+  
     include('funciones.php');
 
     $idlibro = $_GET['idlibro'];
@@ -41,6 +41,11 @@
             <p>Titulo: <?php echo $libro['nombrelibro']; ?> 
             <p>Descripcion: <?php echo $libro['descripcion']; ?> 
             <p>Precio: <?php echo $libro['precio']; ?> 
+            
+            <?php
+               echo "<a class='boton' href='validaFormularioDeCompra.php?idlibro=$idlibro&idcliente=2'>Confirmar compra</a>";
+            ?>
+
         </p>
         </div>
     </main>

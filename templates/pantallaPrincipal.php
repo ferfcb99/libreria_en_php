@@ -61,7 +61,7 @@
         <div style="max-width: 80%; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); 
                     row-gap: 3rem; column-gap: 2rem;">
             <?php
-            include('conexion.php');
+    
             include('funciones.php');
             $con = conectar();
             $consulta = "select * from libro";
