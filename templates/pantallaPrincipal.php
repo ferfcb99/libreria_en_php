@@ -12,8 +12,6 @@
             flex-direction: column;
         }
 
-        .datos {}
-
         .datos div {
             display: flex;
             gap: 6rem;
@@ -43,6 +41,46 @@
         img{
             max-width: 100%;
         }
+
+        .header{
+            padding: 2rem;
+            border: 2px solid #8D9EFF;
+            margin: 0 0 25px 0;
+        }
+
+        .contacto a{
+            text-decoration: none;
+            border: 1px solid white;
+            padding: 5px;
+        }
+
+        .contacto a:hover{
+            border: 1px solid #FFA1CF;
+            border-radius: 10px;
+            padding: 5px;
+        }
+
+        .contacto{
+            display: flex;
+            flex-direction: row;
+            gap: 3rem;
+        }
+
+        .header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo{
+            height: 150px;
+            width: 150px;
+        }
+        .libroindividual{
+            height: 620px;
+            width: 360px;
+        }
+
     </style>
 </head>
 
@@ -50,7 +88,7 @@
 
     <header class="header">
         <div class="logo">
-            <img src="" alt="">
+            <img src="../img/logo.png" alt="">
         </div>
         <div class="contacto">
             <a href="">Contacto</a>
@@ -71,7 +109,7 @@
             <?php while ($fila = mysqli_fetch_array($datos)) { ?>
                 <div class="libro">
                     <?php 
-                    echo "<img src='../img/libro".$fila['idlibro'].".jpg' alt='portada libro'>"
+                    echo "<img class='libroindividual' src='../img/libro ".$fila['idlibro'].".jpg' alt='portada libro'>"
                     ?>
                     <div class="datos">
                         <p><?php echo $fila['nombrelibro']; ?></p>
