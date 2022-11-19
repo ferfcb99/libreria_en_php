@@ -71,7 +71,7 @@
     <form action="validaRegistroUsuario.php" method="POST" class="form">
         <fieldset class="fieldset">
             <legend>
-                Formulario de ingreso
+                Formulario de registro de usuario
             </legend>
             <div class="campos">
                 <div class="campo">

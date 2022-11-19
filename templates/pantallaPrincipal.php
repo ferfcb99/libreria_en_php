@@ -91,7 +91,7 @@
             <img src="../img/logo.png" alt="">
         </div>
         <div class="contacto">
-            <a href="">Contacto</a>
+            <a href="www.facebook.com">Contacto</a>
             <a href="iniciarSesion.php">Cerrar Sesion</a>
         </div>
     </header>

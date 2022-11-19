@@ -9,7 +9,6 @@
 
     $libro = consultaLibroPorId($idlibro);
     
-
 ?>
 
 <!DOCTYPE html>
@@ -25,15 +24,22 @@
             justify-content: center;
             align-items: center;
             height: 100vh;  
+            gap: 50px;
         }
+        .img{
+            max-height: 500px;
+            max-width: 400px;
+        }
+
+
     </style>
 </head>
 <body>
 
     <main class="main" style="max-width: 80%; margin: 0 auto;">
-        <div class="">
+        <div>
                  <?php 
-                    echo "<img src='../img/libro".$libro['idlibro'].".jpg' alt='portada libro'>"
+                    echo "<img class='img' src='../img/libro ".$libro['idlibro'].".jpg' alt='portada libro'>"
                     ?>
          
         </div>
@@ -43,8 +49,10 @@
             <p>Precio: <?php echo $libro['precio']; ?> 
             
             <?php
-               echo "<a class='boton' href='validaFormularioDeCompra.php?idlibro=$idlibro&idcliente=2'>Confirmar compra</a>";
+               echo "<a class='boton' onClick='alerta()' href='validaFormularioDeCompra.php?idlibro=$idlibro&idcliente=2'>Confirmar compra</a>";
+               
             ?>
+            
 
         </p>
         </div>

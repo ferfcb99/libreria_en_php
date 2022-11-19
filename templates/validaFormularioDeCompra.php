@@ -19,9 +19,17 @@
     $consultaEjecutada = mysqli_query($con, $consulta);
 
     if($consultaEjecutada){
+
         header('Location: pantallaPrincipal.php');
+        
     }else{
         header('Location: pantallaCompra.php');
+    }
+
+
+    function alerta(){
+        echo "<script type=\"text/javascript\">alert('Compra exitosa'); </script>"; 
+
     }
 
 ?>

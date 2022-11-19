@@ -70,7 +70,7 @@
     <form action="validaRegistroCliente.php" method="POST" class="form">
         <fieldset class="fieldset">
             <legend>
-                Formulario de ingreso
+                Formulario de registro
             </legend>
             <div class="campos">
                 <div>
