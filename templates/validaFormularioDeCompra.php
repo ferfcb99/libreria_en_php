@@ -1,35 +1,35 @@
 <?php
 
-    include('conexion.php');
+include('conexion.php');
 
-    $formato_fecha = date('Y-m-d');   
-    // 2021-10-27
+$formato_fecha = date('Y-m-d');
+// 2021-10-27
 
-    $formato_hora = date('H:i:s');
-    //14:03:57
+$formato_hora = date('H:i:s');
+//14:03:57
 
-    $idcliente = $_GET['idcliente'];
+$idcliente = $_GET['idcliente'];
+$con = conectar();
 
-    $idlibroo = $_GET['idlibro'];
+$idlibroo = $_GET['idlibro'];
 
-    $consulta = "insert into ClienteLibro(idcliente, idlibro, fecha, hora) values('$idcliente', '$idlibroo', '$formato_fecha', '$formato_hora');";
+$usuarioActivo = "SELECT idcliente from usuario where  estaDentroDelSistema=1;";
 
-    $con = conectar();
+$consultaEjecutada2 = mysqli_query($con, $usuarioActivo);
 
-    $consultaEjecutada = mysqli_query($con, $consulta);
+$idcliente = mysqli_fetch_array($consultaEjecutada2);
 
-    if($consultaEjecutada){
+$idcliente = $_GET['idcliente'];
 
-        header('Location: pantallaPrincipal.php');
-        
-    }else{
-        header('Location: pantallaCompra.php');
-    }
+$consulta = "insert into ClienteLibro(idcliente, idlibro, fecha, hora) values('$idcliente', '$idlibroo', '$formato_fecha', '$formato_hora');";
+
+$consultaEjecutada = mysqli_query($con, $consulta);
 
 
-    function alerta(){
-        echo "<script type=\"text/javascript\">alert('Compra exitosa'); </script>"; 
+if ($consultaEjecutada) {
 
-    }
-
+    header('Location: pantallaPrincipal.php');
+} else {
+    header('Location: pantallaCompra.php');
+}
 ?>

@@ -19,8 +19,10 @@ CREATE TABLE cliente (
 create table usuario(
     nombreUsuario varchar(20) not null unique,
     clave varchar(5) not null,
+    estaDentroDelSistema int not null,
     -- llave foranea 
-    idcliente int not null,     
+    idcliente int not null,  
+  
     primary key(nombreUsuario, clave),
     foreign key(idcliente) references cliente(idcliente)
 );

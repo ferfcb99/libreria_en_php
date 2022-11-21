@@ -82,6 +82,11 @@
         }
 
     </style>
+    ¿<?php
+     echo '<script type="text/javascript">';
+     echo ' alert("Compra exitosa")';  //not showing an alert box.
+     echo '</script>';
+     ?>
 </head>
 
 <body>
@@ -123,7 +128,9 @@
                         <?php
                             $idlibro = $fila['idlibro'];
                             echo " <a class='boton' href='pantallaCompra.php?idlibro=$idlibro'>Comprar</a>";
+                           
                         ?>
+                        
                        
                     </div>
                 </div>

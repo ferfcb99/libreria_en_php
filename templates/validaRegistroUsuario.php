@@ -9,7 +9,7 @@
         $idcliente = consultaUltimoCliente();
         $usuario=$_POST["usuario"];
         $clave=$_POST["clave"];
-        $consulta = "insert into usuario(nombreUsuario, clave, idcliente) values ('$usuario','$clave','$idcliente');";
+        $consulta = "insert into usuario(nombreUsuario, clave, estaDentroDelSistema ,idcliente) values ('$usuario','$clave', 0, '$idcliente');";
         $consultaEjecutada = mysqli_query($con, $consulta);
 
         if($consultaEjecutada){

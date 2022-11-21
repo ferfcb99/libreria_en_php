@@ -1,5 +1,6 @@
 <?php
     include('conexion.php');
+
     $con = conectar();
 
     if(isset($_POST['nombreUsuario']) && isset($_POST['clave'])){
@@ -9,7 +10,10 @@
         $sentencia = "select * from Usuario where nombreUsuario = '".$nombreUsuario."' and clave = '". $clave ."';";
         $consultaEjecutada = mysqli_query($con, $sentencia);
 
-        if($consultaEjecutada){
+        $actualizaEstado = "update Usuario set estaDentroDelSistema = 1 where nombreUsuario = '".$nombreUsuario."' and clave = '". $clave ."';";
+        $consultaEjecutada2 = mysqli_query($con, $actualizaEstado);
+
+        if($consultaEjecutada && $consultaEjecutada){
             header('Location: pantallaPrincipal.php');
         }else{
             echo 'Datos incorrectos';
