@@ -8,7 +8,7 @@
     <title>Iniciar Sesion</title>
 
     <style>
-         .form{
+        .form{
            display: flex;
            min-height: 100vh;
            justify-content: center;
@@ -18,7 +18,7 @@
         .fieldset{
             padding: 30px;
             border-radius: 10px;
-        }
+        }   
         .campos{
             display: flex;
             flex-direction: column;

@@ -84,7 +84,7 @@
     </style>
     ¿<?php
      echo '<script type="text/javascript">';
-     echo ' alert("Compra exitosa")';  //not showing an alert box.
+     echo 'alert("Compra exitosa")';  
      echo '</script>';
      ?>
 </head>

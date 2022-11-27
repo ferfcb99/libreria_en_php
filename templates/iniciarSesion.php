@@ -8,8 +8,7 @@
     <title>Iniciar Sesion</title>
     <style>
       
-      body{
-      }
+    
         .form{
            display: flex;
            min-height: 100vh;

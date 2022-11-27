@@ -27,7 +27,6 @@ $consultaEjecutada = mysqli_query($con, $consulta);
 
 
 if ($consultaEjecutada) {
-
     header('Location: pantallaPrincipal.php');
 } else {
     header('Location: pantallaCompra.php');
