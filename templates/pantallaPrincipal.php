@@ -32,6 +32,22 @@
             border: 1px solid #FFA1CF;
         }
 
+        .boton-rojo{
+            background-color: #E0144C;
+            padding: 0.7rem 1rem;
+            border-radius: 10px;
+            color: white;
+            text-decoration: none;
+            border: 1px solid #E0144C;
+        }
+
+        .boton-rojo:hover {
+            border: 1px solid #E0144C;
+            background-color: white;
+            color: black;
+            transition: 0.6s ease;
+        }
+
         .boton:hover {
             border: 1px solid #FFA1CF;
             background-color: white;
@@ -81,6 +97,11 @@
             width: 360px;
         }
 
+        .ordenaBotones{
+            display: flex;
+            gap: 30px;
+        }
+
     </style>
     ¿<?php
      echo '<script type="text/javascript">';
@@ -96,7 +117,7 @@
             <img src="../img/logo.png" alt="">
         </div>
         <div class="contacto">
-            <a href="www.facebook.com">Contacto</a>
+            <a href="https://www.facebook.com/">Contacto</a>
             <a href="iniciarSesion.php">Cerrar Sesion</a>
         </div>
     </header>
@@ -124,11 +145,19 @@
                             <p><?php echo $fila['autor']; ?></p>
                         </div>
                     </div>
-                    <div>
+                    <div class="ordenaBotones">
                         <?php
                             $idlibro = $fila['idlibro'];
                             echo " <a class='boton' href='pantallaCompra.php?idlibro=$idlibro'>Comprar</a>";
-                           
+                        ?>
+                        <?php
+                            $idlibro = $fila['idlibro'];
+                            echo " <a class='boton boton-rojo' href='eliminaLibro.php?idlibro=$idlibro'>Borrar</a>";
+                        ?>
+
+                        <?php
+                            $idlibro = $fila['idlibro'];
+                            echo " <a class='boton boton-amarillo' href='modificarLibro.php?idlibro=$idlibro'>Modificar</a>";
                         ?>
                         
                        

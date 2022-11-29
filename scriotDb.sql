@@ -98,4 +98,4 @@ Lilith habría sido la primera mujer de la humanidad, pero fue expulsada del cie
 
 insert into cliente(nombrecliente, apellidocliente, telefono, direccion) values("Prueba", "prueba", "3456789", "fvsdv");
 
-insert into usuario(nombreUsuario, clave, estaDentroDelSistema, idcliente) values("test", "45678", 1, 1;
+insert into usuario(nombreUsuario, clave, estaDentroDelSistema, idcliente) values("test", "45678", 1, 1);
